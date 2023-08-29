@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mishravishalpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mishravishalpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: mishravishalpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: mishravishalpipelinesjavascriptdocker 
+          image: vishalcontainerregistry5.azurecr.io/mishravishalpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
